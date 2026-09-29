@@ -1,0 +1,154 @@
+<html>
+<head>
+<title>MyfirstJava.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #bcbec4;}
+.s1 { color: #cf8e6d;}
+.s2 { color: #bcbec4;}
+.s3 { color: #7a7e85;}
+.s4 { color: #6aab73;}
+.s5 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+MyfirstJava.java</font>
+</center></td></tr></table>
+<pre>
+
+<span class="s1">public class </span><span class="s0">MyfirstJava </span><span class="s2">{</span>
+
+    <span class="s1">public static void </span><span class="s0">main</span><span class="s2">(</span><span class="s0">String</span><span class="s2">[] </span><span class="s0">args</span><span class="s2">) {</span>
+
+        <span class="s3">// Question 1</span>
+        <span class="s0">Shape shape </span><span class="s2">= </span><span class="s1">new </span><span class="s0">Shape</span><span class="s2">();</span>
+        <span class="s0">shape</span><span class="s2">.</span><span class="s0">setColor</span><span class="s2">(</span><span class="s4">&quot;Blue&quot;</span><span class="s2">);</span>
+
+        <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s2">(</span><span class="s4">&quot;Shape Color: &quot; </span><span class="s2">+ </span><span class="s0">shape</span><span class="s2">.</span><span class="s0">getColor</span><span class="s2">());</span>
+
+        <span class="s3">// Question 2</span>
+        <span class="s0">Rectangle rectangle </span><span class="s2">= </span><span class="s1">new </span><span class="s0">Rectangle</span><span class="s2">();</span>
+        <span class="s0">rectangle</span><span class="s2">.</span><span class="s0">setColor</span><span class="s2">(</span><span class="s4">&quot;Red&quot;</span><span class="s2">);</span>
+        <span class="s0">rectangle</span><span class="s2">.</span><span class="s0">length </span><span class="s2">= </span><span class="s5">10</span><span class="s2">;</span>
+        <span class="s0">rectangle</span><span class="s2">.</span><span class="s0">width </span><span class="s2">= </span><span class="s5">5</span><span class="s2">;</span>
+
+        <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s2">(</span><span class="s4">&quot;Rectangle Information:&quot;</span><span class="s2">);</span>
+        <span class="s0">rectangle</span><span class="s2">.</span><span class="s0">DisplayInformation</span><span class="s2">();</span>
+        <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s2">(</span><span class="s4">&quot;Color: &quot; </span><span class="s2">+ </span><span class="s0">rectangle</span><span class="s2">.</span><span class="s0">getColor</span><span class="s2">());</span>
+
+        <span class="s3">// Question 3 - Method Overriding</span>
+        <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s2">(</span><span class="s4">&quot;Method Overriding:&quot;</span><span class="s2">);</span>
+        <span class="s0">Shape shape2 </span><span class="s2">= </span><span class="s1">new </span><span class="s0">Rectangle</span><span class="s2">();</span>
+        <span class="s0">shape2</span><span class="s2">.</span><span class="s0">display</span><span class="s2">();</span>
+
+        <span class="s3">// Question 4 - Array of Shape References</span>
+        <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s2">(</span><span class="s4">&quot;Shape Array:&quot;</span><span class="s2">);</span>
+
+        <span class="s0">Shape</span><span class="s2">[] </span><span class="s0">shapes </span><span class="s2">= </span><span class="s1">new </span><span class="s0">Shape</span><span class="s2">[</span><span class="s5">3</span><span class="s2">];</span>
+
+        <span class="s0">shapes</span><span class="s2">[</span><span class="s5">0</span><span class="s2">] = </span><span class="s1">new </span><span class="s0">Shape</span><span class="s2">();</span>
+        <span class="s0">shapes</span><span class="s2">[</span><span class="s5">1</span><span class="s2">] = </span><span class="s1">new </span><span class="s0">Rectangle</span><span class="s2">();</span>
+        <span class="s0">shapes</span><span class="s2">[</span><span class="s5">2</span><span class="s2">] = </span><span class="s1">new </span><span class="s0">Circle</span><span class="s2">();</span>
+
+        <span class="s1">for </span><span class="s2">(</span><span class="s0">Shape s </span><span class="s2">: </span><span class="s0">shapes</span><span class="s2">) {</span>
+            <span class="s0">s</span><span class="s2">.</span><span class="s0">display</span><span class="s2">();</span>
+        <span class="s2">}</span>
+
+        <span class="s3">// Question 7 - Polymorphism</span>
+        <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s2">(</span><span class="s4">&quot;Polymorphism:&quot;</span><span class="s2">);</span>
+
+        <span class="s0">Shape s1 </span><span class="s2">= </span><span class="s1">new </span><span class="s0">Rectangle</span><span class="s2">();</span>
+        <span class="s0">Shape s2 </span><span class="s2">= </span><span class="s1">new </span><span class="s0">Circle</span><span class="s2">();</span>
+
+        <span class="s0">s1</span><span class="s2">.</span><span class="s0">display</span><span class="s2">();</span>
+        <span class="s0">s2</span><span class="s2">.</span><span class="s0">display</span><span class="s2">();</span>
+
+        <span class="s3">// Question 5 - super()</span>
+        <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s2">(</span><span class="s4">&quot;</span><span class="s1">\n</span><span class="s4">Super Example:&quot;</span><span class="s2">);</span>
+
+        <span class="s0">Rectangle rectangle2 </span><span class="s2">= </span><span class="s1">new </span><span class="s0">Rectangle</span><span class="s2">(</span><span class="s4">&quot;Green&quot;</span><span class="s2">, </span><span class="s5">20</span><span class="s2">, </span><span class="s5">10</span><span class="s2">);</span>
+        <span class="s0">rectangle2</span><span class="s2">.</span><span class="s0">DisplayInformation</span><span class="s2">();</span>
+        <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s2">(</span><span class="s4">&quot;Color: &quot; </span><span class="s2">+ </span><span class="s0">rectangle2</span><span class="s2">.</span><span class="s0">getColor</span><span class="s2">());</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+
+
+<span class="s3">// Parent Class</span>
+<span class="s1">class </span><span class="s0">Shape </span><span class="s2">{</span>
+
+    <span class="s0">String color</span><span class="s2">;</span>
+
+    <span class="s3">// Default constructor</span>
+    <span class="s0">Shape</span><span class="s2">() {</span>
+        <span class="s0">color </span><span class="s2">= </span><span class="s4">&quot;Unknown&quot;</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s3">// Constructor</span>
+    <span class="s0">Shape</span><span class="s2">(</span><span class="s0">String color</span><span class="s2">) {</span>
+        <span class="s1">this</span><span class="s2">.</span><span class="s0">color </span><span class="s2">= </span><span class="s0">color</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s3">// Setter</span>
+    <span class="s1">public void </span><span class="s0">setColor</span><span class="s2">(</span><span class="s0">String color</span><span class="s2">) {</span>
+        <span class="s1">this</span><span class="s2">.</span><span class="s0">color </span><span class="s2">= </span><span class="s0">color</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s3">// Getter</span>
+    <span class="s1">public </span><span class="s0">String getColor</span><span class="s2">() {</span>
+        <span class="s1">return </span><span class="s0">color</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s3">// Method that can be overridden</span>
+    <span class="s1">public void </span><span class="s0">display</span><span class="s2">() {</span>
+        <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s2">(</span><span class="s4">&quot;This is a shape.&quot;</span><span class="s2">);</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+
+
+<span class="s3">// Child Class</span>
+<span class="s1">class </span><span class="s0">Rectangle </span><span class="s1">extends </span><span class="s0">Shape </span><span class="s2">{</span>
+
+    <span class="s1">double </span><span class="s0">length</span><span class="s2">;</span>
+    <span class="s1">double </span><span class="s0">width</span><span class="s2">;</span>
+
+    <span class="s3">// Default constructor</span>
+    <span class="s0">Rectangle</span><span class="s2">() {</span>
+        <span class="s1">super</span><span class="s2">();</span>
+        <span class="s0">length </span><span class="s2">= </span><span class="s5">0</span><span class="s2">;</span>
+        <span class="s0">width </span><span class="s2">= </span><span class="s5">0</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s3">// Constructor using super()</span>
+    <span class="s0">Rectangle</span><span class="s2">(</span><span class="s0">String color</span><span class="s2">, </span><span class="s1">double </span><span class="s0">length</span><span class="s2">, </span><span class="s1">double </span><span class="s0">width</span><span class="s2">) {</span>
+        <span class="s1">super</span><span class="s2">(</span><span class="s0">color</span><span class="s2">);</span>
+        <span class="s1">this</span><span class="s2">.</span><span class="s0">length </span><span class="s2">= </span><span class="s0">length</span><span class="s2">;</span>
+        <span class="s1">this</span><span class="s2">.</span><span class="s0">width </span><span class="s2">= </span><span class="s0">width</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s3">// Display length and width</span>
+    <span class="s1">public void </span><span class="s0">DisplayInformation</span><span class="s2">() {</span>
+        <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s2">(</span><span class="s4">&quot;Length: &quot; </span><span class="s2">+ </span><span class="s0">length</span><span class="s2">);</span>
+        <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s2">(</span><span class="s4">&quot;Width: &quot; </span><span class="s2">+ </span><span class="s0">width</span><span class="s2">);</span>
+    <span class="s2">}</span>
+
+    <span class="s3">// Method overriding</span>
+    <span class="s0">@Override</span>
+    <span class="s1">public void </span><span class="s0">display</span><span class="s2">() {</span>
+        <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s2">(</span><span class="s4">&quot;This is a rectangle.&quot;</span><span class="s2">);</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+
+
+<span class="s3">// Another child class for polymorphism</span>
+
+
+    <span class="s1">class </span><span class="s0">Circle </span><span class="s1">extends </span><span class="s0">Shape </span><span class="s2">{</span>
+    <span class="s1">public void </span><span class="s0">display</span><span class="s2">() {</span>
+        <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s2">(</span><span class="s4">&quot;This is a circle.&quot;</span><span class="s2">);</span>
+    <span class="s2">}</span>
+<span class="s2">}</span></pre>
+</body>
+</html>
